@@ -45,6 +45,19 @@ Special outer level classes used in this file:
 
 */
 
+/* samples:
+
+img {
+  filter: url(filters.svg#grayscale); /* Firefox 3.5+ * /
+  filter: gray; /* IE6-9 * /
+  -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ * /
+}
+@media all and (min-width:0) {
+  #element { filter: none; }  /* IE9+ * /
+}
+
+*/
+
 /* The outer boundary of the interface. */
 .cke_chrome {
 	/* This is <span>, so transform it into a block.*/

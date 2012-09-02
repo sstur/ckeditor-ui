@@ -19,21 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainui.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mainui.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skins/ozone/mainui.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="44" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
+            <state line="57" column="0" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.5912409">
               <folding>
-                <element signature="e#3090#4739#1" expanded="true" />
+                <element signature="e#3343#4992#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elementspath.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="elementspath.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skins/ozone/elementspath.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.31232092">
+            <state line="41" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,9 +73,9 @@
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/skins/ozone/filters.svg" />
         <option value="$PROJECT_DIR$/skins/ozone/richcombo.css" />
-        <option value="$PROJECT_DIR$/skins/ozone/mainui.css" />
         <option value="$PROJECT_DIR$/skins/ozone/toolbar.css" />
         <option value="$PROJECT_DIR$/skins/ozone/elementspath.css" />
+        <option value="$PROJECT_DIR$/skins/ozone/mainui.css" />
       </list>
     </option>
   </component>
@@ -431,26 +431,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skins/ozone/filters.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skins/ozone/richcombo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="20" selection-start="1403" selection-end="1403" vertical-scroll-proportion="-10.346154">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skins/ozone/mainui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="44" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3090#4739#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -465,8 +449,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skins/ozone/elementspath.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.31232092">
+        <state line="41" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skins/ozone/filters.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="136" selection-end="136" vertical-scroll-proportion="0.08595989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skins/ozone/mainui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="1680" selection-end="1680" vertical-scroll-proportion="0.5912409">
+          <folding>
+            <element signature="e#3343#4992#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
