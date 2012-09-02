@@ -22,7 +22,7 @@ The following is a visual representation of its main elements:
 /* The box that holds the entire elements path. */
 .cke_path
 {
-	margin-top: 5px;
+	margin-top: 4px;
 	float: left;
 }
 
@@ -34,7 +34,9 @@ The following is a visual representation of its main elements:
 {
 	display: inline-block;
 	float: left;
-	padding: 1px 4px 0;
+	padding: 0 4px;
+  height: 14px;
+  line-height: 14px;
 	color: #60676a;
 	cursor: default;
 	text-decoration: none;

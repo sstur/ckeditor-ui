@@ -50,11 +50,12 @@ Special outer level classes used in this file:
 	/* This is <span>, so transform it into a block.*/
 	display: block;
 
-	/* Rounded borders. */
+	/*
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #D3D3D3;
+  */
 }
 
 .cke_hc.cke_chrome {
@@ -66,23 +67,6 @@ Special outer level classes used in this file:
 .cke_inner {
 	/* This is <span>, so transform it into a block.*/
 	display: block;
-
-	/* Rounded borders. */
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-webkit-touch-callout: none;
-	border-radius: 5px;
-
-	background: #d3d3d3;
-
-	/* The white-to-color gradient we see at the top of the editor. */
-	xbackground: #d3d3d3 url(images/sprites.png) repeat-x 0 -1950px;
-	xbackground: -webkit-gradient(linear, 0 -15, 0 40, from(#fff), to(#d3d3d3)); /* Chrome,Safari4+ */
-	xbackground: -moz-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* FF3.6+ */
-	xbackground: -webkit-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* Chrome10+,Safari5.1+ */
-	xbackground: -o-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* Opera 11.10+ */
-	xbackground: -ms-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* IE10+ */
-	xbackground: linear-gradient(top, #fff -15px, #d3d3d3 40px); /* W3C */
 }
 
 /* Added to the outer boundary of the UI when in inline editing,
@@ -115,43 +99,29 @@ Special outer level classes used in this file:
 	overflow: hidden;
 }
 
-.cke_toolbar_break {
-  width: 100%;
-  height: 1px;
-  background: black;
-  overflow: visible;
+.cke_top {
+  background: #f0f0f0 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExOTJCMEVERDEyMDQ2QkIzQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFM0IyMkUwREVBNDQxMUUxOUVBMTgwQjVCMzc0RTFDOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFM0IyMkUwQ0VBNDQxMUUxOUVBMTgwQjVCMzc0RTFDOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFFMDRCNTVGMEIyMDY4MTE5MTA5QzgyMjdCRkU5RTZBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY3N0YxMTc0MDcyMDY4MTE5MkIwRUREMTIwNDZCQjNBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+GTI+xgAAAO9JREFUeNpMkksShSAQA2Xk/oe1dOXvtTYvJQsrhiHJDLR1Xa/raq1N01RVfMH3fUOCAZKAeZ4hC2SFpVDnebptqXJgeEWHqjLuAY7jsEKV6b86/4hZkVR+lQd/I/Q0oHaie0AGRd0e5n5XehVoO7qswhw8RNWzUc9EnureRwR99n1v27a5l7Y8ZhsIGTXj6gmNQG4AQAyDXf813HAwTDTiQIB6lwxuz+VkJqnWU0kNcctvWW2ANOMM/Ga+6adyO7mQ+HzfgS/gmTFemsjmQuBzgF0927IsUE4jzykj9gDVmWw3UgIYJm/kG8xIPwEGAOSeK0ozYOTfAAAAAElFTkSuQmCC");
+  padding: 3px 0 0 3px;
+  border: 1px solid #aeaeae;
+  border-radius: 4px 4px 0 0;
+  box-shadow: inset 0 1px 1px white;
 }
 
-.cke_top,
-.cke_toolbar_break {
+.cke_contents {
+  border: 1px solid #aeaeae;
+  border-width: 0 1px;
+}
+
+.cke_bottom {
+  background: #f0f0f0 url(images/bg-pattern.png);
+  border: 1px solid #aeaeae;
+  border-radius: 0 0 4px 4px;
+  height: 22px;
   position: relative;
 }
 
-.cke_toolbar {
-  position: relative;
-  z-index: 2;
-}
-
-.cke_top:before,
-.cke_toolbar_break:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 31px;
-  background: #e8e8e8; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5YTlkOWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #e8e8e8 0%, #9a9d9f 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#9a9d9f)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #e8e8e8 0%,#9a9d9f 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#9a9d9f',GradientType=0 ); /* IE6-8 */
+.cke_toolbox_collapser {
+  display: none;
 }
 
 /* The resizer is the small UI element that is rendered at the bottom right
@@ -159,20 +129,53 @@ Special outer level classes used in this file:
 .cke_resizer {
 	/* To avoid using images for the resizer, we create a small triangle,
 	   using some CSS magic. */
-	width: 0;
-	height: 0;
-	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	/*
+  overflow: hidden;
 	border-width: 12px 12px 0 12px;
 	border-color: transparent #EFEFEF transparent transparent;
-	border-style: dashed solid dashed dashed;	/* dashed is for HC mode */
+	border-style: dashed solid dashed dashed;
 	margin: 10px 0 0;
 	font-size: 0;
-
-	float: right;
+	opacity: 0.8;
+  */
+	position: absolute;
+  right: 1px;
+  bottom: 1px;
 	vertical-align: bottom;
 
 	cursor: se-resize;
-	opacity: 0.8;
+}
+.cke_resizer:before {
+  content: "\2022";
+  display: block;
+  float: right;
+  width: 16px;
+  height: 8px;
+  font-size: 15px;
+  text-align: right;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  color: grey;
+  text-shadow: 1px 1px 0 white;
+  line-height: 8px;
+}
+.cke_resizer:after {
+  content: "\2022\A0\2022";
+  display: block;
+  float: right;
+  width: 16px;
+  height: 8px;
+  font-size: 15px;
+  text-align: right;
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  color: grey;
+  text-shadow: 1px 1px 0 white;
+  line-height: 8px;
 }
 
 .cke_resizer_ltr {

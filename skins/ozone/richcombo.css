@@ -29,6 +29,7 @@ The visual representation of a rich combo widget looks as follows:
 {
 	display: inline-block;
 	float: left;
+  margin-right: 3px;
 }
 
 .cke_rtl .cke_combo
@@ -67,7 +68,9 @@ The visual representation of a rich combo widget looks as follows:
 	float: left;
 	padding: 2px 4px 2px 6px;
 	height: 22px;
+  /*
 	margin: 0 5px 5px 0;
+	*/
 
 	background: -moz-linear-gradient(bottom, #fff, #d3d3d3 100px);
 	background: -webkit-gradient(linear, left bottom, left -100, from(#fff), to(#d3d3d3));
@@ -85,8 +88,6 @@ a.cke_combo_button:active
 .cke_rtl .cke_combo_button
 {
 	float: right;
-	margin-left: 5px;
-	margin-right: 0;
 }
 
 /* A basic support for the high-contrast mode to enhance the readability. */

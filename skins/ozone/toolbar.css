@@ -53,6 +53,7 @@ Special outer level classes used in this file:
 .cke_toolbar
 {
 	float: left;
+  margin: 0 3px 3px 0;
 }
 
 .cke_rtl .cke_toolbar
@@ -63,23 +64,23 @@ Special outer level classes used in this file:
 /* The box that holds buttons. */
 .cke_toolgroup
 {
-  border: 1px solid #8a8a8a;
-  -moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	float: left;
-	margin: 2px 3px 3px 3px;
+  box-shadow: inset 0 1px 1px white;
 	padding: 1px;
-  background: #f7f7f7; /* Old browsers */
+  background: #fafafa; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiYmJiYmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f7f7f7 0%, #bbbbbb 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#bbbbbb)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f7f7f7 0%,#bbbbbb 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #f7f7f7 0%,#bbbbbb 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f7f7f7 0%,#bbbbbb 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #f7f7f7 0%,#bbbbbb 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#bbbbbb',GradientType=0 ); /* IE6-8 */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #fafafa 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #fafafa 0%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */
 }
 
 .cke_hc .cke_toolgroup
@@ -91,8 +92,6 @@ Special outer level classes used in this file:
 .cke_rtl .cke_toolgroup
 {
 	float: right;
-	margin-left: 6px;
-	margin-right: 0;
 }
 
 .cke_rtl.cke_hc .cke_toolgroup
@@ -197,6 +196,14 @@ a.cke_button_off:active
 	height: 16px;
 	float: left;
 	display: inline-block;
+  /*
+  -webkit-filter: grayscale(.9);
+  */
+}
+a.cke_button_off:hover .cke_button_icon {
+  /*
+  -webkit-filter: grayscale(0);
+  */
 }
 
 .cke_rtl .cke_button_icon
@@ -220,6 +227,7 @@ a.cke_button_off:active
 	vertical-align: middle;
 	float: left;
 	cursor: default;
+
 }
 
 .cke_hc .cke_button_label
