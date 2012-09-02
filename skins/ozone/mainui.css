@@ -1,0 +1,217 @@
+/*
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+/*
+mainui.css (part of editor.css)
+=================================
+
+This file styles the basic structure of the CKEditor user interface - the box
+that holds everything.
+
+CKEditor offers two main editing modes. The main UI blocks that compose these
+modes are:
+
+	For "Theme UI" mode, the one most generally used:
+
+	+-- .cke_chrome ----------------------+
+	|+-- .cke_inner ---------------------+|
+	|| +-- .cke_top -------------------+ ||
+	|| |                               | ||
+	|| +-------------------------------+ ||
+	|| +-- .cke_contents --------------+ ||
+	|| |                               | ||
+	|| +-------------------------------+ ||
+	|| +-- .cke_bottom ----------------+ ||
+	|| |                               | ||
+	|| +-------------------------------+ ||
+	|+-----------------------------------+|
+	+-------------------------------------+
+
+	For "Inline Editing" mode:
+
+	+-- .cke_chrome .cke_float------------+
+	|+-- .cke_inner ---------------------+|
+	|| +-- .cke_top -------------------+ ||
+	|| |                               | ||
+	|| +-------------------------------+ ||
+	|+-----------------------------------+|
+	+-------------------------------------+
+
+Special outer level classes used in this file:
+
+	.cke_hc: Available when the editor is rendered on "High Contrast".
+
+*/
+
+/* The outer boundary of the interface. */
+.cke_chrome {
+	/* This is <span>, so transform it into a block.*/
+	display: block;
+
+	/* Rounded borders. */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #D3D3D3;
+}
+
+.cke_hc.cke_chrome {
+	/* In HC, we don't have a visible inner border so we reduce the spacing a bit.*/
+	padding: 2px;
+}
+
+/* The inner boundary of the interface. */
+.cke_inner {
+	/* This is <span>, so transform it into a block.*/
+	display: block;
+
+	/* Rounded borders. */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-touch-callout: none;
+	border-radius: 5px;
+
+	background: #d3d3d3;
+
+	/* The white-to-color gradient we see at the top of the editor. */
+	xbackground: #d3d3d3 url(images/sprites.png) repeat-x 0 -1950px;
+	xbackground: -webkit-gradient(linear, 0 -15, 0 40, from(#fff), to(#d3d3d3)); /* Chrome,Safari4+ */
+	xbackground: -moz-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* FF3.6+ */
+	xbackground: -webkit-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* Chrome10+,Safari5.1+ */
+	xbackground: -o-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* Opera 11.10+ */
+	xbackground: -ms-linear-gradient(top, #fff -15px, #d3d3d3 40px); /* IE10+ */
+	xbackground: linear-gradient(top, #fff -15px, #d3d3d3 40px); /* W3C */
+}
+
+/* Added to the outer boundary of the UI when in inline editing,
+   when the UI is floating. */
+.cke_float {
+	/* Make white the space between the outer and the inner borders. */
+	background: #fff;
+}
+
+.cke_float .cke_inner {
+	/* As we don't have blocks following top (toolbar) we suppress the padding
+	   as the toolbar defines its own margin. */
+	padding-bottom: 0;
+}
+
+/* The "contents" block of the UI. */
+.cke_hc .cke_contents {
+	/* Show the editing area border in HC as we have no colors. */
+	border: 1px solid black;
+}
+
+/* Make the main spaces enlarge to hold potentially floated content. */
+.cke_top,
+.cke_contents,
+.cke_bottom {
+	/* These are <span>s, so transform them into blocks.*/
+	display: block;
+
+	/* Ideally this should be "auto", but it shows scrollbars in IE7. */
+	overflow: hidden;
+}
+
+.cke_toolbar_break {
+  width: 100%;
+  height: 1px;
+  background: black;
+  overflow: visible;
+}
+
+.cke_top,
+.cke_toolbar_break {
+  position: relative;
+}
+
+.cke_toolbar {
+  position: relative;
+  z-index: 2;
+}
+
+.cke_top:before,
+.cke_toolbar_break:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  background: #e8e8e8; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5YTlkOWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #e8e8e8 0%, #9a9d9f 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#9a9d9f)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e8e8e8 0%,#9a9d9f 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #e8e8e8 0%,#9a9d9f 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#9a9d9f',GradientType=0 ); /* IE6-8 */
+}
+
+/* The resizer is the small UI element that is rendered at the bottom right
+   part of the editor. It makes is possible to resize the editor UI. */
+.cke_resizer {
+	/* To avoid using images for the resizer, we create a small triangle,
+	   using some CSS magic. */
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-width: 12px 12px 0 12px;
+	border-color: transparent #EFEFEF transparent transparent;
+	border-style: dashed solid dashed dashed;	/* dashed is for HC mode */
+	margin: 10px 0 0;
+	font-size: 0;
+
+	float: right;
+	vertical-align: bottom;
+
+	cursor: se-resize;
+	opacity: 0.8;
+}
+
+.cke_resizer_ltr {
+	margin-left: -12px;
+}
+
+/* This class is added in RTL mode. This is a special case for the resizer
+   (usually the .cke_rtl class is used), because it may not necessarily be in
+   RTL mode if the main UI is RTL. It depends instead on the context where the
+   editor is inserted on. */
+.cke_resizer_rtl {
+	float: left;
+	border-color: transparent transparent transparent #EFEFEF;
+	border-style: dashed dashed dashed solid;	/* dashed is for HC mode */
+	margin-right: -12px;
+
+	cursor: sw-resize;
+}
+
+/* For now, we avoid showing the resizer on HC becuase it can't be rendered
+   properly. */
+.cke_hc .cke_resizer {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #fff;
+	margin-left: 0;
+}
+
+.cke_hc .cke_resizer_rtl {
+	margin-right: 0;
+}
+
+/* The editing area (where users type) can be rendered as an editable <div>
+   element (e.g. divarea plugin). In that case, this is the class applied to
+   that element. */
+.cke_wysiwyg_div {
+	display: block;
+	height: 100%;
+	overflow: auto;
+	padding: 0 8px;
+	outline-style: none;
+}
