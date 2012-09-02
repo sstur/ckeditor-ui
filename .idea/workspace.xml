@@ -19,10 +19,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mainui.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mainui.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skins/ozone/mainui.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="15" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.08029197">
+            <state line="115" column="36" selection-start="4653" selection-end="4653" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2758#4407#1" expanded="true" />
               </folding>
@@ -30,10 +30,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elementspath.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="elementspath.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skins/ozone/elementspath.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="66" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.7421203">
               <folding />
             </state>
           </provider>
@@ -74,8 +74,8 @@
         <option value="$PROJECT_DIR$/skins/ozone/filters.svg" />
         <option value="$PROJECT_DIR$/skins/ozone/toolbar.css" />
         <option value="$PROJECT_DIR$/skins/ozone/richcombo.css" />
-        <option value="$PROJECT_DIR$/skins/ozone/elementspath.css" />
         <option value="$PROJECT_DIR$/skins/ozone/mainui.css" />
+        <option value="$PROJECT_DIR$/skins/ozone/elementspath.css" />
       </list>
     </option>
   </component>
@@ -447,13 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skins/ozone/elementspath.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="66" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skins/ozone/richcombo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="20" selection-start="1403" selection-end="1403" vertical-scroll-proportion="-10.346154">
@@ -463,10 +456,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skins/ozone/mainui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="15" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.08029197">
+        <state line="115" column="36" selection-start="4653" selection-end="4653" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#2758#4407#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skins/ozone/elementspath.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.7421203">
+          <folding />
         </state>
       </provider>
     </entry>

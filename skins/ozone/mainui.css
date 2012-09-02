@@ -127,19 +127,8 @@ Special outer level classes used in this file:
 /* The resizer is the small UI element that is rendered at the bottom right
    part of the editor. It makes is possible to resize the editor UI. */
 .cke_resizer {
-	/* To avoid using images for the resizer, we create a small triangle,
-	   using some CSS magic. */
 	width: 16px;
 	height: 16px;
-	/*
-  overflow: hidden;
-	border-width: 12px 12px 0 12px;
-	border-color: transparent #EFEFEF transparent transparent;
-	border-style: dashed solid dashed dashed;
-	margin: 10px 0 0;
-	font-size: 0;
-	opacity: 0.8;
-  */
 	position: absolute;
   right: 1px;
   bottom: 1px;
@@ -147,6 +136,7 @@ Special outer level classes used in this file:
 
 	cursor: se-resize;
 }
+/* To avoid using images for the resizer, we create three dots using some CSS magic. */
 .cke_resizer:before {
   content: "\2022";
   display: block;
@@ -157,13 +147,13 @@ Special outer level classes used in this file:
   text-align: right;
   position: absolute;
   top: 1px;
-  right: 0;
-  color: grey;
+  right: 2px;
+  color: #aeaeae;
   text-shadow: 1px 1px 0 white;
   line-height: 8px;
 }
 .cke_resizer:after {
-  content: "\2022\A0\2022";
+  content: "\2022\2022";
   display: block;
   float: right;
   width: 16px;
@@ -171,11 +161,12 @@ Special outer level classes used in this file:
   font-size: 15px;
   text-align: right;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   right: 0;
-  color: grey;
+  color: #aeaeae;
   text-shadow: 1px 1px 0 white;
   line-height: 8px;
+  letter-spacing: 2px;
 }
 
 .cke_resizer_ltr {
