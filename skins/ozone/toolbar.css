@@ -227,7 +227,7 @@ a.cke_button_off:hover .cke_button_icon {
 	vertical-align: middle;
 	float: left;
 	cursor: default;
-
+  text-shadow: 1px 1px 0 white;
 }
 
 .cke_hc .cke_button_label
