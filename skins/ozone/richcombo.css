@@ -25,22 +25,37 @@ The visual representation of a rich combo widget looks as follows:
 */
 
 /* The box that hold the entire combo widget */
-.cke_combo
-{
+.cke_combo {
 	display: inline-block;
 	float: left;
   margin-right: 3px;
+
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px white;
+  padding: 1px;
+  background: #fafafa; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #fafafa 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fafafa 0%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #fafafa 0%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#eeeeee',GradientType=0 ); /* IE6-8 */
+
 }
 
-.cke_rtl .cke_combo
-{
+.cke_rtl .cke_combo {
 	float: right;
 }
 
 /* The label of the combo widget. It is invisible by default, yet
    it's important for semantics and accessibility. */
-.cke_combo_label
-{
+.cke_combo_label {
 	display: none;
 	float: left;
 	line-height: 26px;
@@ -50,64 +65,47 @@ The visual representation of a rich combo widget looks as follows:
 	opacity: 0.7; /* Safari, Opera and Mozilla */
 }
 
-.cke_rtl .cke_combo_label
-{
+.cke_rtl .cke_combo_label {
 	float: right;
 	margin-left: 5px;
 	margin-right: 0;
 }
 
 /* The container for combo text and arrow. */
-.cke_combo_button
-{
+.cke_combo_button {
 	display: inline-block;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	background: url(images/sprites.png) 0 -100px repeat-x;	/* For backwards compatibility. */
 	float: left;
-	padding: 2px 4px 2px 6px;
+	padding: 0 4px 0 6px;
 	height: 22px;
-  /*
-	margin: 0 5px 5px 0;
-	*/
-
-	background: -moz-linear-gradient(bottom, #fff, #d3d3d3 100px);
-	background: -webkit-gradient(linear, left bottom, left -100, from(#fff), to(#d3d3d3));
 }
 
 /* Different states of the container. */
 a.cke_combo_button:hover,
 a.cke_combo_button:focus,
-a.cke_combo_button:active
-{
+a.cke_combo_button:active {
 	background: #DFF1FF;
 	outline: none;
 }
 
-.cke_rtl .cke_combo_button
-{
+.cke_rtl .cke_combo_button {
 	float: right;
 }
 
 /* A basic support for the high-contrast mode to enhance the readability. */
-.cke_hc .cke_combo_button
-{
+.cke_hc .cke_combo_button {
 	border: 1px solid black;
 	padding: 1px 3px 1px 3px;
 }
 
-.cke_hc .cke_rtl .cke_combo_button
-{
+.cke_hc .cke_rtl .cke_combo_button {
 	border: 1px solid black;
 }
 
 /* The label that shows the current value of the rich combo.
    By default, it holds the name of the property.
    See: .cke_combo_inlinelabel */
-.cke_combo_text
-{
-	line-height: 24px;
+.cke_combo_text {
+	line-height: 22px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	color: #666666;
@@ -115,29 +113,25 @@ a.cke_combo_button:active
 	cursor: default;
 }
 
-.cke_rtl .cke_combo_text
-{
+.cke_rtl .cke_combo_text {
 	float: right;
 	text-align: right;
 }
 
 /* The label of the combo whose value hasn't been changed (it's default).
    It displays the name of the property the combo is responsible for. */
-.cke_combo_inlinelabel
-{
+.cke_combo_inlinelabel {
 	font-style: italic;
 	opacity: 0.70;
 }
 
-a.cke_combo_button:hover .cke_combo_inlinelabel
-{
+a.cke_combo_button:hover .cke_combo_inlinelabel {
 	opacity: 1;
 }
 
 /* The handler which opens the panel of rich combo properties.
    It holds an arrow as a visual indicator. */
-.cke_combo_open
-{
+.cke_combo_open {
     cursor: default;
     display: inline-block;
     font-size: 0;
@@ -148,8 +142,7 @@ a.cke_combo_button:hover .cke_combo_inlinelabel
 }
 
 /* The arrow which is displayed inside of the .cke_combo_open handler. */
-.cke_combo_arrow
-{
+.cke_combo_arrow {
 	margin: 9px 0 0;
 	float: left;
 	opacity: 0.70;
@@ -163,8 +156,7 @@ a.cke_combo_button:hover .cke_combo_inlinelabel
 	border-top: 3px solid #2f2f2f;
 }
 
-.cke_hc .cke_combo_arrow
-{
+.cke_hc .cke_combo_arrow {
 	font-size: 10px;
 	width: auto;
 	border: 0;
