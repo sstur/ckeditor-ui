@@ -20,8 +20,7 @@ The following is a visual representation of its main elements:
 */
 
 /* The box that holds the entire elements path. */
-.cke_path
-{
+.cke_path {
 	margin-top: 4px;
 	float: left;
   text-shadow: 1px 1px 0 white;
@@ -31,8 +30,7 @@ The following is a visual representation of its main elements:
 .cke_path_item,
 /* Empty element available at the end of the elements path, to help us keeping
    the proper box size when the elements path is empty. */
-.cke_path_empty
-{
+.cke_path_empty {
 	display: inline-block;
 	float: left;
 	padding: 0 4px;
@@ -46,21 +44,18 @@ The following is a visual representation of its main elements:
 
 .cke_rtl .cke_path,
 .cke_rtl .cke_path_item,
-.cke_rtl .cke_path_empty
-{
+.cke_rtl .cke_path_empty {
 	float: right;
 }
 
-.cke_rtl .cke_path
-{
+.cke_rtl .cke_path {
   margin-right: 18px;
 }
 
 /* The items are <a> elements, so we define its hover states here. */
 a.cke_path_item:hover,
 a.cke_path_item:focus,
-a.cke_path_item:active
-{
+a.cke_path_item:active {
 	opacity: 0.9;
 	color: #000;
   text-decoration: underline;

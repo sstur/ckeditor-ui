@@ -62,13 +62,6 @@ img {
 .cke_chrome {
 	/* This is <span>, so transform it into a block.*/
 	display: block;
-
-	/*
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	border: 1px solid #D3D3D3;
-  */
 }
 
 .cke_hc.cke_chrome {
