@@ -141,10 +141,12 @@ img {
   right: 1px;
   bottom: 1px;
 	vertical-align: bottom;
-
+  background: url(icons/resize-br.png);
+  opacity: .5;
 	cursor: se-resize;
 }
 /* To avoid using images for the resizer, we create three dots using some CSS magic. */
+/*
 .cke_resizer:before {
   content: "\2022";
   display: block;
@@ -176,6 +178,7 @@ img {
   line-height: 8px;
   letter-spacing: 2px;
 }
+*/
 
 .cke_resizer_ltr {
 	margin-left: -12px;
