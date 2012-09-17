@@ -64,11 +64,6 @@ img {
 	display: block;
 }
 
-.cke_hc.cke_chrome {
-	/* In HC, we don't have a visible inner border so we reduce the spacing a bit.*/
-	padding: 2px;
-}
-
 /* The inner boundary of the interface. */
 .cke_inner {
 	/* This is <span>, so transform it into a block.*/
@@ -86,12 +81,6 @@ img {
 	/* As we don't have blocks following top (toolbar) we suppress the padding
 	   as the toolbar defines its own margin. */
 	padding-bottom: 0;
-}
-
-/* The "contents" block of the UI. */
-.cke_hc .cke_contents {
-	/* Show the editing area border in HC as we have no colors. */
-	border: 1px solid black;
 }
 
 /* Make the main spaces enlarge to hold potentially floated content. */
@@ -159,40 +148,6 @@ img {
   right: -4px;
   bottom: -4px;
 }
-/* To avoid using images for the resizer, we create three dots using some CSS magic. */
-/*
-.cke_resizer:before {
-  content: "\2022";
-  display: block;
-  float: right;
-  width: 16px;
-  height: 8px;
-  font-size: 15px;
-  text-align: right;
-  position: absolute;
-  top: 1px;
-  right: 2px;
-  color: #aeaeae;
-  text-shadow: 1px 1px 0 white;
-  line-height: 8px;
-}
-.cke_resizer:after {
-  content: "\2022\2022";
-  display: block;
-  float: right;
-  width: 16px;
-  height: 8px;
-  font-size: 15px;
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: #aeaeae;
-  text-shadow: 1px 1px 0 white;
-  line-height: 8px;
-  letter-spacing: 2px;
-}
-*/
 
 .cke_resizer_ltr {
 	margin-left: -12px;
@@ -209,19 +164,6 @@ img {
 	margin-right: -12px;
 
 	cursor: sw-resize;
-}
-
-/* For now, we avoid showing the resizer on HC becuase it can't be rendered
-   properly. */
-.cke_hc .cke_resizer {
-	width: 10px;
-	height: 10px;
-	border: 1px solid #fff;
-	margin-left: 0;
-}
-
-.cke_hc .cke_resizer_rtl {
-	margin-right: 0;
 }
 
 /* The editing area (where users type) can be rendered as an editable <div>

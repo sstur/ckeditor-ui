@@ -32,7 +32,6 @@ The following is a visual representation of its main elements:
    the proper box size when the elements path is empty. */
 .cke_path_empty {
 	display: inline-block;
-	float: left;
 	padding: 0 4px;
   height: 14px;
   line-height: 14px;
@@ -40,6 +39,12 @@ The following is a visual representation of its main elements:
 	text-decoration: none;
 	outline: 0;
 	border: 0;
+}
+
+.cke_ltr .cke_path,
+.cke_ltr .cke_path_item,
+.cke_ltr .cke_path_empty {
+  float: left;
 }
 
 .cke_rtl .cke_path,
