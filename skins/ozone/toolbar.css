@@ -51,8 +51,11 @@ Special outer level classes used in this file:
 
 /* The box that holds each toolbar. */
 .cke_toolbar {
-	float: left;
   margin: 0 3px 3px 0;
+}
+
+.cke_ltr .cke_toolbar {
+  float: left;
 }
 
 .cke_rtl .cke_toolbar {
@@ -63,50 +66,44 @@ Special outer level classes used in this file:
 .cke_toolgroup {
   border: 1px solid #c9c9c9;
 	border-radius: 3px;
-	float: left;
   box-shadow: inset 0 1px 1px white;
 	padding: 1px;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
 }
 
-.cke_hc .cke_toolgroup {
+.cke_ltr .cke_toolgroup {
+  float: left;
 }
 
 .cke_rtl .cke_toolgroup {
 	float: right;
 }
 
-.cke_rtl.cke_hc .cke_toolgroup {
-}
-
 /* A toolbar button . */
-a.cke_button {
+.cke_button {
 	display: inline-block;
 	height: 18px;
 	padding: 2px 4px;
 	outline: none;
 	cursor: default;
-	float: left;
 	border: 0;
-  margin-left: 1px;
   border-radius: 2px;
 }
 
-a.cke_button:first-child {
+.cke_ltr .cke_button {
+  float: left;
+  margin-left: 1px;
+}
+.cke_ltr .cke_button:first-child {
 	margin-left: 0;
 }
 
 .cke_rtl .cke_button {
-	float: right;
+  float: right;
+  margin-right: 1px;
 }
-
-.cke_hc .cke_button {
-  padding: 1px 3px;
-	border: 1px solid black;
-}
-
-.cke_rtl.cke_hc .cke_button {
-	margin: -2px -2px 0 4px;
+.cke_rtl .cke_button:first-child {
+	margin-right: 0;
 }
 
 /* This class is applied to the button when it is "active" (pushed).
@@ -116,11 +113,7 @@ a.cke_button:first-child {
 	background-color: #ededed;
 }
 
-.cke_hc .cke_button_on {
-	border-color: black;
-}
-
-a.cke_button_on {
+.cke_button_on {
   padding: 1px 3px;
   border: 1px solid #AEAEAE;
 }
@@ -145,10 +138,6 @@ a.cke_button_on:active {
 	background-color: white;
 }
 
-.cke_hc a.cke_button:hover {
-	background: black;
-}
-
 a.cke_button_off:hover,
 a.cke_button_off:focus,
 a.cke_button_off:active {
@@ -165,47 +154,35 @@ a.cke_button_off:active {
 	margin-top: 1px;
 	width: 16px;
 	height: 16px;
-	float: left;
 	display: inline-block;
-  /*
-  -webkit-filter: grayscale(.9);
-  */
 }
-a.cke_button_off:hover .cke_button_icon {
-  /*
-  -webkit-filter: grayscale(0);
-  */
+
+.cke_ltr .cke_button_icon {
+  float: left;
 }
 
 .cke_rtl .cke_button_icon {
 	float: right;
 }
 
-.cke_hc .cke_button_icon {
-	display: none;
-}
-
 /* The label of the button that stores the name of the feature. By default,
    labels are invisible. They can be revealed on demand though. */
 .cke_button_label {
 	display: none;
-	padding-left: 3px;
 	margin-top: 1px;
 	line-height: 16px;
 	vertical-align: middle;
-	float: left;
 	cursor: default;
   text-shadow: 1px 1px 0 white;
 }
 
-.cke_hc .cke_button_label {
-	padding: 0;
-	display: inline-block;
+.cke_ltr .cke_button_label {
+  padding-left: 3px;
+  float: left;
 }
 
 .cke_rtl .cke_button_label {
 	padding-right: 3px;
-	padding-left: 0;
 	float: right;
 }
 
@@ -214,7 +191,7 @@ a.cke_button_off:hover .cke_button_icon {
 .cke_button_arrow {
 	/* Arrow in CSS */
 	display: inline-block;
-	margin: 7px 0 0 1px;
+	margin-top: 7px;
 	width: 0;
 	height: 0;
 	border-width: 3px;
@@ -224,51 +201,39 @@ a.cke_button_off:hover .cke_button_icon {
 	vertical-align: middle;
 }
 
+.cke_ltr .cke_button_arrow {
+	margin-left: 4px;
+}
+
 .cke_rtl .cke_button_arrow {
-	margin-right: 5px;
-	margin-left: 0;
-}
-
-.cke_hc .cke_button_arrow {
-	font-size: 10px;
-	margin: 0 -2px 0 3px;
-	width: auto;
-	border: 0;
-}
-
-.cke_rtl.cke_hc .cke_button_arrow {
-	margin: 0 3px 0 -2px;
+	margin-right: 4px;
 }
 
 /* The vertical separator which is used within a single toolbar to split
    buttons into sub-groups. */
 .cke_toolbar_separator {
-	float: left;
-	border-left: solid 1px #D3D3D3;
 	margin: 3px 2px 0;
 	height: 16px;
 }
 
+.cke_ltr .cke_toolbar_separator {
+  float: left;
+  border-left: solid 1px #D3D3D3;
+}
+
 .cke_rtl .cke_toolbar_separator {
 	border-right: solid 1px #D3D3D3;
-	border-left: 0;
 	float: right;
-}
-
-.cke_hc .cke_toolbar_separator {
-	margin-left: 0;
-	width: 3px;
-}
-
-.cke_rtl.cke_hc .cke_toolbar_separator {
-	margin:3px 0 0 2px;
 }
 
 /* The dummy element that breaks toolbars.
    Once it is placed, the very next toolbar is moved to the new row. */
 .cke_toolbar_break {
 	display: block;
-	clear: left;
+}
+
+.cke_ltr .cke_toolbar_break {
+  clear: left;
 }
 
 .cke_rtl .cke_toolbar_break {
@@ -279,7 +244,6 @@ a.cke_button_off:hover .cke_button_icon {
 .cke_toolbox_collapser {
 	width: 12px;
 	height: 11px;
-	float: right;
 	border: 1px outset #d3d3d3;
 	margin: 11px 0 0;
 	font-size: 0;
@@ -291,12 +255,12 @@ a.cke_button_off:hover .cke_button_icon {
 	margin: 0 2px 4px;
 }
 
-.cke_rtl .cke_toolbox_collapser {
-	float: left;
+.cke_ltr .cke_toolbox_collapser {
+  float: right;
 }
 
-.cke_hc .cke_toolbox_collapser {
-	border-width: 1px;
+.cke_rtl .cke_toolbox_collapser {
+	float: left;
 }
 
 /* The CSS arrow, which belongs to the toolbar collapser. */
@@ -315,12 +279,4 @@ a.cke_button_off:hover .cke_button_icon {
 .cke_toolbox_collapser.cke_toolbox_collapser_min .cke_arrow {
 	margin: 4px 2px 0 0;
 	border-color: #2f2f2f transparent transparent;
-}
-
-.cke_hc .cke_toolbox_collapser .cke_arrow {
-	font-size: 8px;
-	width: auto;
-	border: 0;
-	margin-top: 0;
-	margin-right: 2px;
 }
