@@ -27,39 +27,43 @@ The visual representation of a rich combo widget looks as follows:
 /* The box that hold the entire combo widget */
 .cke_combo {
 	display: inline-block;
-	float: left;
+}
+
+.cke_ltr .cke_combo {
+  float: left;
   margin-right: 3px;
 }
 
 .cke_rtl .cke_combo {
 	float: right;
+  margin-left: 3px;
 }
 
 /* The label of the combo widget. It is invisible by default, yet
    it's important for semantics and accessibility. */
 .cke_combo_label {
 	display: none;
-	float: left;
 	line-height: 26px;
 	vertical-align: top;
-	margin-right: 5px;
 	filter: alpha(opacity = 70); /* IE */
 	opacity: 0.7; /* Safari, Opera and Mozilla */
+}
+
+.cke_ltr .cke_combo_label {
+  float: left;
+  margin-right: 5px;
 }
 
 .cke_rtl .cke_combo_label {
 	float: right;
 	margin-left: 5px;
-	margin-right: 0;
 }
 
 /* The container for combo text and arrow. */
 .cke_combo_button {
 	display: inline-block;
-	float: left;
 	padding: 1px 4px 1px 6px;
 	height: 22px;
-
   border: 1px solid #c9c9c9;
   border-radius: 3px;
   box-shadow: inset 0 1px 1px white;
@@ -75,18 +79,12 @@ a.cke_combo_button:active {
 	outline: none;
 }
 
+.cke_ltr .cke_combo_button {
+  float: left;
+}
+
 .cke_rtl .cke_combo_button {
 	float: right;
-}
-
-/* A basic support for the high-contrast mode to enhance the readability. */
-.cke_hc .cke_combo_button {
-	border: 1px solid black;
-	padding: 1px 3px 1px 3px;
-}
-
-.cke_hc .cke_rtl .cke_combo_button {
-	border: 1px solid black;
 }
 
 /* The label that shows the current value of the rich combo.
@@ -97,8 +95,12 @@ a.cke_combo_button:active {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	color: #666666;
-	float: left;
 	cursor: default;
+}
+
+.cke_ltr .cke_combo_text {
+  float: left;
+	text-align: left;
 }
 
 .cke_rtl .cke_combo_text {
