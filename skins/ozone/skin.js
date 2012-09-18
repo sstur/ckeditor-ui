@@ -31,7 +31,7 @@ For this skin, the following tasks are achieved in this file:
 // used on config.skin to tell the editor to use the skin.
 //
 // This is the only mandatory property to be defined in this file.
-CKEDITOR.skin.name = 'kama';
+CKEDITOR.skin.name = 'ozone';
 
 // 2. Register browser specific skin files
 // -----------------------------------------
@@ -49,13 +49,13 @@ CKEDITOR.skin.name = 'kama';
 // the complete list:
 // http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.env.html
 //
-// Internet explorer is an expection and the browser version is also accepted
+// Internet explorer is an exception and the browser version is also accepted
 // (ie7, ie8, ie9, ie10), as well as a special name for IE in Quirks mode (iequirks).
 //
 // The available browser specific files must be set separately for editor.css
 // and dialog.css.
-CKEDITOR.skin.ua_editor = 'ie,iequirks,ie7,ie8';
-CKEDITOR.skin.ua_dialog = 'ie,iequirks,ie7,ie8,opera';
+CKEDITOR.skin.ua_editor = 'ie';
+CKEDITOR.skin.ua_dialog = 'ie,opera';
 
 
 // 3. Define the "Chameleon" feature
