@@ -92,7 +92,7 @@ CKEDITOR.skin.chameleon = function( editor, part ) {
 			'background:linear-gradient(' + definition + ');'; // W3C
 	}
 
-	var css;
+	var css = '';
 
 	// The Chameleon feature is available for each CKEditor instance,
 	// independently. Because of this, we need to prefix all CSS selectors with
@@ -109,106 +109,13 @@ CKEDITOR.skin.chameleon = function( editor, part ) {
 	// page that includes the editor instance. Note that the dialog styles are
 	// also taken in consideration here.
 	if ( part == 'editor' ) {
-		css = cssId + ' .cke_inner,' +
-			cssId + ' .cke_dialog_tab' +
+		css = cssId + ' .cke_inner' +
 			'{' +
 		    'background-color:$color;' +
-				'background:-webkit-gradient(linear,0 -15,0 40,from(#fff),to($color));' +
-				getLinearBackground( 'top,#fff -15px,$color 40px' ) +
-			'}' +
-
-			cssId + ' .cke_toolgroup' +
-			'{' +
-				'background:-webkit-gradient(linear,0 0,0 100,from(#fff),to($color));' +
-				getLinearBackground( 'top,#fff,$color 100px' ) +
-			'}' +
-
-			cssId + ' .cke_combo_button' +
-			'{' +
-				'background:-webkit-gradient(linear, left bottom, left -100, from(#fff), to($color));' +
-				getLinearBackground( 'bottom,#fff,$color 100px' ) +
-			'}' +
-
-			cssId + ' .cke_dialog_contents,' +
-			cssId + ' .cke_dialog_footer' +
-			'{' +
-			'background-color:$color !important;' +
-			'}' +
-
-			cssId + ' .cke_dialog_tab:hover,' +
-			cssId + ' .cke_dialog_tab:active,' +
-			cssId + ' .cke_dialog_tab:focus,' +
-			cssId + ' .cke_dialog_tab_selected' +
-			'{' +
-			'background-color:$color;' +
-			'background-image:none;' +
 			'}' +
 
 			'';
 
-
-	// The "panel" part is necessary because it represents contents of panels
-	// used in the editor, like context-menus or the toolbar combos panels.
-	// Those are loaded inside iframes, so this template is used there. Because
-	// of this iframe isolation, we don't need to specify the editor id class
-	// name in the rules selectors.
-	//
-	// The menu.css rules are usually the ones to be overriden here, while all
-	// the rest is handled by the above "editor" part.
-	} else if ( part == 'panel' ) {
-		css = '.cke_menubutton_icon' +
-			'{' +
-				'background-color:$color !important;' +
-				'border-color:$color !important;' +
-			'}' +
-
-			'.cke_menubutton:hover .cke_menubutton_icon,' +
-			'.cke_menubutton:focus .cke_menubutton_icon,' +
-			'.cke_menubutton:active .cke_menubutton_icon' +
-			'{' +
-				'background-color:$color !important;' +
-				'border-color:$color !important;' +
-			'}' +
-
-			'.cke_menubutton:hover .cke_menubutton_label,' +
-			'.cke_menubutton:focus .cke_menubutton_label,' +
-			'.cke_menubutton:active .cke_menubutton_label' +
-			'{' +
-				'background-color:$color !important;' +
-			'}' +
-
-			'.cke_menubutton_disabled:hover .cke_menubutton_label,' +
-			'.cke_menubutton_disabled:focus .cke_menubutton_label,' +
-			'.cke_menubutton_disabled:active .cke_menubutton_label' +
-			'{' +
-				'background-color: transparent !important;' +
-			'}' +
-
-			'.cke_menubutton_disabled:hover .cke_menubutton_icon,' +
-			'.cke_menubutton_disabled:focus .cke_menubutton_icon,' +
-			'.cke_menubutton_disabled:active .cke_menubutton_icon' +
-			'{' +
-				'background-color:$color !important;' +
-				'border-color:$color !important;' +
-			'}' +
-
-			'.cke_menubutton_disabled .cke_menubutton_icon' +
-			'{' +
-				'background-color:$color !important;' +
-				'border-color:$color !important;' +
-			'}' +
-
-			'.cke_menuseparator' +
-			'{' +
-				'background-color:$color !important;' +
-			'}' +
-
-			'.cke_menubutton:hover,' +
-			'.cke_menubutton:focus,' +
-			'.cke_menubutton:active' +
-			'{' +
-				'background-color:$color !important;' +
-			'}';
 	}
 
 	return css;
