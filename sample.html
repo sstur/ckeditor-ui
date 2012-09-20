@@ -10,17 +10,12 @@
       background: #eee;
     }
     .select {
-      height: 18px;
       width: 140px;
-      padding: 2px;
+      height: 22px;
       border: 1px solid #999;
       border-radius: 2px;
       background: white url(select.png) right center no-repeat;
       background: white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODIyQUNDRTE5M0FEN0FEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QzU0RURENUI3NEQxMUUxODVFM0E5RkQzRkE4MDc5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QzU0RURENEI3NEQxMUUxODVFM0E5RkQzRkE4MDc5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjkwRTAxMTQxMjIwNjgxMTgwODNEQUM5MDc1RTIzMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTgyMkFDQ0UxOTNBRDdBREMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5LmQFgAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC") right center no-repeat;
-    }
-    .select-in {
-      height: 18px;
-      width: 140px;
       overflow: hidden;
       position: relative;
     }
@@ -28,31 +23,34 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 120%;
       height: 100%;
       margin: 0;
-      padding: 0;
+      padding: 2px;
       background: transparent none;
       border: 0;
       cursor: pointer;
       opacity: .8;
     }
     select:focus {
+      /* remove colored glow when focused */
       outline: none;
     }
     @media screen and (-webkit-min-device-pixel-ratio:0) {
       /* webkit only styles */
       select {
         -webkit-appearance: none;
-        right: 0;
+        width: 100%;
         opacity: 1;
       }
     }
   </style>
+  <script>
+  </script>
 </head>
 <body>
 <form>
-  <div class="select"><div class="select-in"><select><option></option><option>One</option><option>Two</option></select></div></div>
+  <div class="select"><select><option></option><option>One</option><option>Two</option></select></div>
 </form>
 </body>
 </html>
