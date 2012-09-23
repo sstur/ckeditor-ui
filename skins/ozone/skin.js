@@ -57,6 +57,11 @@ CKEDITOR.skin.name = 'ozone';
 CKEDITOR.skin.ua_editor = 'ie';
 CKEDITOR.skin.ua_dialog = 'ie,opera';
 
+if (navigator.userAgent.match(/\b(Mac OS X)\b/i)) {
+  //this is used because ff on mac needs a special css fix
+  document.body.className += 'os-x';
+}
+
 
 // 3. Define the "Chameleon" feature
 // -----------------------------------

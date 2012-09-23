@@ -125,49 +125,24 @@ img {
 /* The resizer is the small UI element that is rendered at the bottom right
    part of the editor. It makes is possible to resize the editor UI. */
 .cke_resizer {
-	width: 16px;
-	height: 16px;
+	width: 14px;
+	height: 14px;
 	position: absolute;
-  right: 1px;
-  bottom: 1px;
+  right: 0;
+  bottom: 0;
 	vertical-align: bottom;
-  background: url(icon-resize-handle.png);
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBMjYzOUUxRkRCNjExRTFCRjhCRDJBRjVCMDZEMzg3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBMjYzOUUwRkRCNjExRTFCRjhCRDJBRjVCMDZEMzg3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzMgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ1dWlkOjBENjQ2RDhDNzlEN0RFMTFBRkE1OUU2M0I1QUUzOThDIiBzdFJlZjpkb2N1bWVudElEPSJ1dWlkOjVCREMzODY0NzlEN0RFMTFBRkE1OUU2M0I1QUUzOThDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+szJq9gAAAK1JREFUeNrs0T0KwkAQhuGsTTobvYYQEfUuIjEGsdSbKOpxbDyAtSlE7dL4V3iA9R0YIYXETdI68BRTfN/ArrHWelWm5lWcfwEjv/CNMeaXCQ5lC2I8MC1TIOEXRrIXLZDwHZHuvSIFYzw/l7HB0bVAQjcMdV/jgr5LQYg0c3mh4cDlDSR8xUD3Fc5ooY55XkGsl6XExxIndNHAFru8gn3mtTtI0NZ9JmE03wIMAIAN0/dF0IR6AAAAAElFTkSuQmCC") -3px -3px;
   opacity: .5;
-  /*
-  */
 	cursor: se-resize;
 }
-/*
-.cke_resizer:before {
-  content: " ";
-  display: inline-block;
-  height: 0;
-  width: 0;
-  border: 6px solid transparent;
-  border-top-color: #a1a1a1;
-  -webkit-transform: rotate(-45deg);
-  position: absolute;
-  right: -4px;
-  bottom: -4px;
-}
-*/
 
-.cke_resizer_ltr {
-	margin-left: -12px;
-}
+.cke_resizer_ltr {}
 
 /* This class is added in RTL mode. This is a special case for the resizer
    (usually the .cke_rtl class is used), because it may not necessarily be in
    RTL mode if the main UI is RTL. It depends instead on the context where the
    editor is inserted on. */
-.cke_resizer_rtl {
-	float: left;
-	border-color: transparent transparent transparent #EFEFEF;
-	border-style: dashed dashed dashed solid;	/* dashed is for HC mode */
-	margin-right: -12px;
-
-	cursor: sw-resize;
-}
+.cke_resizer_rtl {}
 
 /* The editing area (where users type) can be rendered as an editable <div>
    element (e.g. divarea plugin). In that case, this is the class applied to

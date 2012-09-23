@@ -46,9 +46,10 @@ Comments in this file will give more details about each of the above blocks.
 	visibility: visible;
 }
 
+/*
 .cke_dialog>tbody>tr>td {
   position: relative;
-}
+}*/
 
 .cke_dialog>tbody>tr>td:before {
   display: block;
@@ -58,9 +59,9 @@ Comments in this file will give more details about each of the above blocks.
   right: 0;
   bottom: 0;
   left: 0;
-  border: solid 1px #c6c6c6;
-  background-color: #e9e9e9;
   z-index: -1;
+  background-color: #e9e9e9;
+  border: solid 1px #c6c6c6;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px #e0e0e0;
 }
@@ -73,6 +74,18 @@ Comments in this file will give more details about each of the above blocks.
 	padding: 4px;
 	margin: 2px;
 	border-radius: 3px;
+}
+.cke_dialog_body:before {
+  display: block;
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 57px;
+  right: 7px;
+  bottom: 7px;
+  left: 7px;
+  border: solid 1px #c6c6c6;
+  border-radius: 3px;
 }
 
 /* Due to our reset we have to recover the styles of some elements. */
@@ -95,36 +108,16 @@ Comments in this file will give more details about each of the above blocks.
    and the footer. */
 .cke_dialog_contents {
 	overflow: auto;
-  /*
-	padding: 17px 10px 5px 10px;
-	margin-top: 22px;
-	*/
+  position: relative;
+  z-index: 1;
 }
 
 /* The contents body part, which will hold all elements available in the dialog. */
 .cke_dialog_contents_body {
-  position: relative;
 	overflow: auto;
 	padding: 39px 10px 5px 10px;
 	margin-top: 22px;
   min-height: 220px;
-}
-.cke_dialog_contents_body:before {
-  display: block;
-  content: " ";
-  position: absolute;
-  top: 22px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: solid 1px #c6c6c6;
-  border-bottom: none;
-  border-radius: 3px 3px 0 0;
-  z-index: 1;
-}
-.cke_dialog_contents_body>div {
-  position: relative;
-  z-index: 2;
 }
 
 /* The dialog footer, which usually contains the "Ok" and "Cancel" buttons as
@@ -132,19 +125,6 @@ Comments in this file will give more details about each of the above blocks.
 .cke_dialog_footer {
   position: relative;
 	text-align: right;
-  /*height: 37px;*/
-}
-.cke_dialog_footer:before {
-  display: block;
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: solid 1px #c6c6c6;
-  border-top: none;
-  border-radius: 0 0 3px 3px;
 }
 
 .cke_rtl .cke_dialog_footer {
@@ -152,16 +132,13 @@ Comments in this file will give more details about each of the above blocks.
 }
 
 .cke_dialog_footer .cke_resizer {
-  position: absolute;
-  bottom: -6px;
-}
-
-.cke_dialog_footer .cke_resizer_ltr {
-  right: -6px;
-}
-
-.cke_dialog_footer .cke_resizer_rtl {
-  left: -6px;
+  float: right;
+  position: relative;
+  right: -4px;
+  top: 22px;
+  background-position: -2 -2;
+  width: 12px;
+  height: 12px;
 }
 
 /*
@@ -738,27 +715,27 @@ a.cke_smile:hover img {
   /* mozilla only styles */
   .cke_dialog_contents select {
     background: #fff none;
+  }
+  .os-x .cke_dialog_contents select {
     /* hack to get rid of outline on ff mac */
     color: rgba(0,0,0,0);
     text-shadow: 0 0 0 #000;
   }
-  .cke_dialog_contents select option {
+  .os-x .cke_dialog_contents select option {
     color: #000;
     text-shadow: none;
   }
-  /* alternative hack for outline on ff mac
-  .cke_dialog_contents select:focus {
-    outline: 1px solid white;
-    outline-offset: -2px;
-  }
-  */
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   /* webkit only styles */
   .cke_dialog_contents select {
     -webkit-appearance: none;
-    background: #fff url(icons/resize-br.png) right center no-repeat;
+    background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODIyQUNDRTE5M0FEN0FEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QzU0RURENUI3NEQxMUUxODVFM0E5RkQzRkE4MDc5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QzU0RURENEI3NEQxMUUxODVFM0E5RkQzRkE4MDc5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjkwRTAxMTQxMjIwNjgxMTgwODNEQUM5MDc1RTIzMkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTgyMkFDQ0UxOTNBRDdBREMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5LmQFgAAAAaUlEQVQoz2P4//8/A7UwdkEGhiggTsODo4g2LBEImJmZvwE1/UfHIHGQPNGGAbHCggULFrKxsf1ENgjEB4mD5EnxJoaByAZB5Yk3DNlAPj6+L8gGkWUYzMC3b982IRtEtmFQjaxYxDAwAGi4TwMYKNLfAAAAAElFTkSuQmCC") right center no-repeat;
     padding: 1px 14px 1px 3px;
+  }
+  .cke_rtl .cke_dialog_contents select {
+    background-position: left center;
+    padding: 1px 3px 1px 14px;
   }
 }
