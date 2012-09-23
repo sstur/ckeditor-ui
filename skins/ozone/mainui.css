@@ -131,12 +131,13 @@ img {
   right: 1px;
   bottom: 1px;
 	vertical-align: bottom;
-  /*
-  background: url(icons/resize-br.png);
+  background: url(icon-resize-handle.png);
   opacity: .5;
+  /*
   */
 	cursor: se-resize;
 }
+/*
 .cke_resizer:before {
   content: " ";
   display: inline-block;
@@ -149,6 +150,7 @@ img {
   right: -4px;
   bottom: -4px;
 }
+*/
 
 .cke_resizer_ltr {
 	margin-left: -12px;
