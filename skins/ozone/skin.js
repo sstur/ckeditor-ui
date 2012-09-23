@@ -115,7 +115,8 @@ CKEDITOR.skin.chameleon = function( editor, part ) {
 	// also taken in consideration here.
 	if ( part == 'editor' ) {
     //editor.document.$.getElementsByClassName('cke_inner')[0].className += ' cke_uicolor';
-		css = cssId + ' .cke_inner' +
+		css = cssId + ' .cke_inner, ' +
+          cssId + ' .cke_dialog_body' +
 			'{' +
 		    'background-color:$color;' +
 			'}' +
