@@ -97,6 +97,7 @@ a.cke_combo_button:active {
 	overflow: hidden;
 	color: #666666;
 	cursor: default;
+  text-shadow: 0 1px 0 #fff;
 }
 
 .cke_ltr .cke_combo_text {
