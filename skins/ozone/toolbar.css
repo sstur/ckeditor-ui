@@ -69,6 +69,7 @@ Special outer level classes used in this file:
   box-shadow: inset 0 1px 1px white;
 	padding: 1px;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
+  background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
 }
 
 .cke_ltr .cke_toolgroup {

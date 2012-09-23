@@ -138,7 +138,7 @@ Comments in this file will give more details about each of the above blocks.
   float: right;
   position: relative;
   right: -4px;
-  top: 22px;
+  top: 24px;
   background-position: -2 -2;
   width: 12px;
   height: 12px;
@@ -223,13 +223,13 @@ a.cke_dialog_tab_selected {
 	width: 14px;
 	top: 5px;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
-  border: 1px solid #aeaeae;
+  background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
+  border: 1px solid #a0a0a0;
   border-radius: 2px;
   box-shadow: 0 0 0 2px #ddd;
 }
 .cke_dialog_close_button:hover {
-  border-color: #999;
-  box-shadow: 0 0 0 2px #fff;
+  border-color: #555;
 }
 
 .cke_dialog_close_button span {
@@ -312,7 +312,7 @@ It is possible to have nested V/H-Boxes.
 }
 
 .cke_dialog_ui_hbox td {
-	padding-bottom: 6px;
+	padding-bottom: 8px;
 }
 .cke_ltr .cke_dialog_ui_hbox td {
 	padding-right: 8px;
@@ -389,7 +389,8 @@ a.cke_dialog_ui_button {
   display: block;
   padding: 4px 0;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
-  border: 1px solid #cfcfcf;
+  background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
+  border: 1px solid #b7b7b7;
   border-radius: 2px;
 	text-align: center;
 }
@@ -403,7 +404,6 @@ a.cke_dialog_ui_button span {
 /* The inner part of the button. */
 a.cke_dialog_ui_button_ok span,
 a.cke_dialog_ui_button_cancel span {
-	width: 60px;
 	padding-right: 20px;
 	padding-left: 20px;
 }
@@ -428,7 +428,7 @@ span.cke_dialog_ui_button {
 	color: #222;
 	display: inline-block;
 	cursor: default;
-	min-width: 60px;
+	min-width: 40px;
 }
 
 /* .cke_disabled is appended to disabled buttons */
@@ -441,6 +441,7 @@ a.cke_dialog_ui_button span.cke_disabled {
 a.cke_dialog_ui_button:hover,
 a.cke_dialog_ui_button:focus,
 a.cke_dialog_ui_button:active {
+  border-color: #555;
 }
 
 /* A special container that holds the footer buttons. */
@@ -642,8 +643,7 @@ a.cke_smile:hover img {
 
 /* Compensate focus outline for some input elements. (#6200) */
 .cke_dialog_ui_checkbox_input:focus,
-.cke_dialog_ui_radio_input:focus,
-.cke_btn_over {
+.cke_dialog_ui_radio_input:focus {
 	outline: 1px dotted #696969;
 }
 
@@ -674,7 +674,14 @@ a.cke_smile:hover img {
   box-sizing: border-box;
   border: 1px solid #a0a0a0;
   border-radius: 2px;
-  box-shadow: 0 0 0 2px #e0e0e0;
+  box-shadow: 0 0 0 2px #ededed;
+}
+
+.cke_dialog_contents select:focus,
+.cke_dialog_contents textarea:focus,
+.cke_dialog_contents input[type="text"]:focus,
+.cke_dialog_contents input[type="password"]:focus {
+  border-color: #555;
 }
 
 .cke_dialog_contents textarea,

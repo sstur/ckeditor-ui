@@ -68,6 +68,7 @@ The visual representation of a rich combo widget looks as follows:
   border-radius: 3px;
   box-shadow: inset 0 1px 1px white;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
+  background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
 }
 
 /* Different states of the container. */
