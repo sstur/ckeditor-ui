@@ -340,20 +340,15 @@ The basic text field to input text.
 +-------------------------------------------------+
 */
 
+/* removed in favor of styling the element itself */
+/* may need to be undone for ie < 8 */
+
 input.cke_dialog_ui_input_text,
 input.cke_dialog_ui_input_password {
-	background-color: white;
-	border: none;
-	padding: 0;
-	width: 100%;
-	height: 14px;
 }
 
 div.cke_dialog_ui_input_text,
 div.cke_dialog_ui_input_password {
-	background-color: white;
-	border: 1px solid #a0a0a0;
-	padding: 1px 0;
 }
 
 /*
@@ -375,21 +370,6 @@ The textarea field to input larger text.
 |  +------------------------------------------------+ |
 +-----------------------------------------------------+
 */
-
-textarea.cke_dialog_ui_input_textarea {
-	background-color: white;
-	border: none;
-	padding: 0;
-	width: 100%;
-	overflow: auto;
-	resize: none;
-}
-
-div.cke_dialog_ui_input_textarea {
-	background-color: white;
-	border: 1px solid #a0a0a0;
-	padding: 1px 0;
-}
 
 
 /*
@@ -430,42 +410,18 @@ a.cke_dialog_ui_button_cancel span {
 }
 
 /* Special class appended to the Ok button. */
-a.cke_dialog_ui_button_ok {
-  /*
-	background-position: 0 -1143px;
-	*/
-}
+a.cke_dialog_ui_button_ok {}
 
-a.cke_dialog_ui_button_ok span {
-  /*
-	background: transparent url(images/sprites.png) no-repeat scroll right -1219px;
-	*/
-}
+a.cke_dialog_ui_button_ok span {}
 
-.cke_rtl a.cke_dialog_ui_button_ok span {
-  /*
-	background-position: left -1219px;
-	*/
-}
+.cke_rtl a.cke_dialog_ui_button_ok span {}
 
 /* Special class appended to the Cancel button. */
-a.cke_dialog_ui_button_cancel {
-  /*
-	background-position: 0 -1104px;
-	*/
-}
+a.cke_dialog_ui_button_cancel {}
 
-a.cke_dialog_ui_button_cancel span {
-  /*
-	background: transparent url(images/sprites.png) no-repeat scroll right -1245px;
-	*/
-}
+a.cke_dialog_ui_button_cancel span {}
 
-.cke_rtl a.cke_dialog_ui_button_cancel span {
-  /*
-	background-position: left -1245px;
-	*/
-}
+.cke_rtl a.cke_dialog_ui_button_cancel span {}
 
 span.cke_dialog_ui_button {
 	padding: 2px 10px;
@@ -703,12 +659,40 @@ a.cke_smile:hover img {
 	height: 100%;
 }
 
-/* experimental styles */
-.cke_dialog_contents select {
+/* input elements */
+.cke_dialog_contents textarea,
+.cke_dialog_contents input[type="text"],
+.cke_dialog_contents input[type="password"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1px 2px;
+  width: 100%;
+  background-color: white;
   border: 1px solid #a0a0a0;
-  border-radius: 0;
+  border-radius: 2px;
+}
+
+.cke_dialog_contents input[type="text"],
+.cke_dialog_contents input[type="password"] {
+  height: 20px;
+}
+
+/* select element */
+.cke_dialog_contents select {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 1px;
+  width: 100%;
+  height: 20px;
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
   cursor: pointer;
+}
+.cke_ltr .cke_dialog_contents select {
+  padding-left: 2px;
+}
+.cke_rtl .cke_dialog_contents select {
+  padding-right: 2px;
 }
 
 @-moz-document url-prefix() {
