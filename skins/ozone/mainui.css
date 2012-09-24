@@ -96,18 +96,17 @@ img {
   border: 0;
 }
 
-.cke_contents {}
-
 .cke_bottom {
   position: relative;
   height: 22px;
   border-top: 1px solid #aeaeae;
+  box-shadow: inset 0 -1px 1px #ddd;
 }
 
 .cke_inner {
   border: 1px solid #aeaeae;
   border-radius: 4px;
-  box-shadow: inset 0 1px 1px white, 1px 1px 2px rgba(0,0,0,.06);
+  box-shadow: inset 0 1px 1px white;
   background: #f0f0f0 url(images/bg-pattern.png);
 }
 
