@@ -474,11 +474,8 @@ Styles for other dialog element types.
 
 .cke_dialog a.cke_btn_reset {
 	float: right;
-	background-position: 0 -32px;
-	background-image: url(images/mini.gif);
 	width: 16px;
 	height: 16px;
-	background-repeat: no-repeat;
 	border: 1px none;
 	font-size: 1px;
 }
@@ -490,11 +487,8 @@ Styles for other dialog element types.
 .cke_dialog a.cke_btn_locked,
 .cke_dialog a.cke_btn_unlocked {
 	float: left;
-	background-position: 0 0;
-	background-image: url(images/mini.gif);
 	width: 16px;
 	height: 16px;
-	background-repeat: no-repeat;
 	border: none 1px;
 	font-size: 1px;
 }
@@ -507,10 +501,7 @@ Styles for other dialog element types.
 	float: right;
 }
 
-.cke_dialog a.cke_btn_unlocked {
-	background-position: 0 -16px;
-	background-image: url(images/mini.gif);
-}
+.cke_dialog a.cke_btn_unlocked {}
 
 .cke_dialog .cke_btn_over {
 	border: outset 1px;
