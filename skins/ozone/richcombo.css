@@ -124,33 +124,43 @@ a.cke_combo_button:hover .cke_combo_inlinelabel {
 /* The handler which opens the panel of rich combo properties.
    It holds an arrow as a visual indicator. */
 .cke_combo_open {
-    cursor: default;
-    display: inline-block;
-    font-size: 0;
-    height: 19px;
-    line-height: 17px;
-    margin: 1px 3px;
-    width: 5px;
+  cursor: default;
+  display: inline-block;
+  font-size: 0;
+  height: 16px;
+  line-height: 16px;
+  margin: 3px 3px 1px 3px;
+  width: 8px;
+}
+.cke_ltr .cke_combo_open {
+  padding-left: 6px;
+  border-left: 1px solid #c9c9c9;
+  box-shadow: inset 1px 0 1px white;
+}
+.cke_rtl .cke_combo_open {
+  padding-right: 6px;
+  border-right: 1px solid #c9c9c9;
+  box-shadow: inset -1px 0 1px white;
 }
 
 /* The arrow which is displayed inside of the .cke_combo_open handler. */
 .cke_combo_arrow {
-	margin: 9px 0 0;
-	float: left;
+	margin: 7px 0 0;
 	opacity: 0.70;
 
 	/* Pure CSS Arrow */
 	height: 0;
 	width: 0;
 	font-size: 0;
-	border-left: 3px solid transparent;
-	border-right: 3px solid transparent;
-	border-top: 3px solid #2f2f2f;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #2f2f2f;
 }
 
-.cke_hc .cke_combo_arrow {
-	font-size: 10px;
-	width: auto;
-	border: 0;
-	margin-top: 4px;
+.cke_ltr .cke_combo_arrow {
+  float: left;
+}
+
+.cke_rtl .cke_combo_arrow {
+  float: left;
 }
