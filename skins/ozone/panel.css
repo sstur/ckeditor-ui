@@ -45,23 +45,21 @@ panel contents and color panels check menu.css and colorpanel.css.
 .cke_panel {
 	/* Restore the loading hide */
 	visibility: visible;
-
-	border: 1px solid #8f8f73;
-	background-color: #fff;
-
+	/*border: 1px solid #8f8f73;*/
+	border: 1px solid #bfbfbf;
+	background-color: #ededed;
 	width: 120px;
 	height: 100px;
-
 	overflow: hidden;
-
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.14);
 }
 
 /* This class represents panels which are used as context menus. */
 .cke_menu_panel {
-	padding: 2px;
+	padding: 0;
 	margin: 0;
 }
 
@@ -78,11 +76,9 @@ panel contents and color panels check menu.css and colorpanel.css.
 .cke_panel_frame {
 	width: 100%;
 	height: 100%;
-
 	/* Font */
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 12px;
-
 	overflow: auto;
 	overflow-x: hidden;
 }
@@ -125,22 +121,27 @@ is its visual representation:
 /* The list of panel items. */
 .cke_panel_list {
 	list-style-type: none;
-	margin: 3px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	white-space: nowrap;
 }
 
 /* The item of .cke_panel_list */
 .cke_panel_listItem {
-	margin: 0px;
+	margin: 0;
+  border-top: 1px solid #d7d7d7;
+  box-shadow: inset 0 1px 0 0 #fff;
+}
+.cke_panel_listItem:first-child {
+  border-top: 0;
+  box-shadow: none;
 }
 
 /* The child of .cke_panel_listItem. These elements contain spans which are
    to display a real name of the property which is visible for an end-user. */
 .cke_panel_listItem a {
-	padding: 2px;
+  padding: 3px 2px;
 	display: block;
-	border: 1px solid #fff;
 	color: inherit !important;
 	text-decoration: none;
 	overflow: hidden;
@@ -162,35 +163,40 @@ is its visual representation:
 }
 
 .cke_panel_listItem.cke_selected a {
-	border: 1px solid #ccc;
-	background-color: #e9f5ff;
 }
 
 .cke_panel_listItem a:hover,
 .cke_panel_listItem a:focus,
 .cke_panel_listItem a:active {
-	border-color: #316ac5;
-	background-color: #dff1ff;
-}
 
-.cke_hc .cke_panel_listItem.cke_selected a,
-.cke_hc .cke_panel_listItem a:hover,
-.cke_hc .cke_panel_listItem a:focus,
-.cke_hc .cke_panel_listItem a:active {
-	border-width: 3px;
-	padding: 0px;
+
+
+
+	background-color: #e5e5e5;
 }
 
 /* The title of the entire panel which is visible on top of the list. */
 .cke_panel_grouptitle {
 	font-size: 11px;
-	font-family: 'Microsoft Sans Serif' , Tahoma, Arial, Verdana, Sans-Serif;
+	font-family: "Microsoft Sans Serif" , Tahoma, Arial, Verdana, sans-serif;
 	font-weight: bold;
 	white-space: nowrap;
-	background-color: #dcdcdc;
+	background-color: rgba(0,0,0,.1);
+  border-bottom: 1px solid #555;
 	color: #000;
-	margin:0px;
-	padding:3px;
+	margin:0;
+	padding: 3px 2px;
+  line-height: 14px;
+}
+.cke_panel_list + .cke_panel_grouptitle {
+  border-top: 1px solid #d7d7d7;
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,.8);
+}
+
+/* hack to account for invisible element on demo page; this would not go in final skin */
+#cke_1981 + ul + .cke_panel_grouptitle, #cke_2112 + ul + .cke_panel_grouptitle {
+  border-top: 0;
+  box-shadow: none;
 }
 
 /* The following styles set defaults of the elements used by the Paragraph
@@ -203,6 +209,6 @@ is its visual representation:
 .cke_panel_listItem h5,
 .cke_panel_listItem h6,
 .cke_panel_listItem pre {
-	margin-top: 3px;
-	margin-bottom: 3px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
