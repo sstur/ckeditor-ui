@@ -92,6 +92,7 @@ a.cke_combo_button:active {
    By default, it holds the name of the property.
    See: .cke_combo_inlinelabel */
 .cke_combo_text {
+  min-width: 36px;
 	line-height: 22px;
 	text-overflow: ellipsis;
 	overflow: hidden;
