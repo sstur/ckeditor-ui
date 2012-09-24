@@ -146,12 +146,12 @@ is its visual representation:
 	text-decoration: none;
 	overflow: hidden;
 	text-overflow: ellipsis;
+  text-shadow: 0 1px 0 #fff;
 }
 
 /* IE6 */
 * html .cke_panel_listItem a {
 	width : 100%;
-
 	/* IE is not able to inherit the color, so we must force it to black */
 	color: #000;
 }
@@ -163,6 +163,7 @@ is its visual representation:
 }
 
 .cke_panel_listItem.cke_selected a {
+  background-color: #fff;
 }
 
 .cke_panel_listItem a:hover,
@@ -187,16 +188,6 @@ is its visual representation:
 	margin:0;
 	padding: 3px 2px;
   line-height: 14px;
-}
-.cke_panel_list + .cke_panel_grouptitle {
-  border-top: 1px solid #d7d7d7;
-  box-shadow: inset 0 1px 0 0 rgba(255,255,255,.8);
-}
-
-/* hack to account for invisible element on demo page; this would not go in final skin */
-#cke_1981 + ul + .cke_panel_grouptitle, #cke_2112 + ul + .cke_panel_grouptitle {
-  border-top: 0;
-  box-shadow: none;
 }
 
 /* The following styles set defaults of the elements used by the Paragraph

@@ -4,7 +4,7 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	// Just put the name of your custom skin here.
-	config.skin = location.search.match(/[&?]old([&=]|$)/) ? 'kama' : 'ozone';
+  var m = location.search.match(/[&?]skin=([\w-]+)/);
+  config.skin = m ? m[1] : 'ozone';
 };
 
