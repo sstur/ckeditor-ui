@@ -13,7 +13,7 @@ Online demo:
 http://sstur.github.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
 (best viewed in Chrome/Safari, but also tested in Firefox)
 
-Please feel free to submit bugs to the (Issue Tracker) [/sstur/ckeditor-ui/issues] if you notice
+Please feel free to submit bugs to the [Issue Tracker] (/sstur/ckeditor-ui/issues) if you notice
 rendering problems in any major browser.
 
 Pull requests welcome.
