@@ -15,5 +15,5 @@ Online demo:
 http://sstur.github.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
 (best viewed in Chrome/Safari, but also tested in Firefox)
 
-Support for Internet Explorer 8 and 9 is in the works. Please submit bugs in the [Issue Tracker]
-(/sstur/ckeditor-ui/issues). Pull requests welcome.
+Support for Internet Explorer 8 and 9 is in the works. Please submit bugs in the (Issue Tracker)
+[/sstur/ckeditor-ui/issues]. Pull requests welcome.
