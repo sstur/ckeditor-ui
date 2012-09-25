@@ -6,5 +6,14 @@ This repository contains a build of the open source [CKEditor] (http://ckeditor.
 
 Skin source located under [skins/ozone] (/sstur/ckeditor-ui/tree/master/skins/ozone)
 
-Please feel free to add an issue to the issue tracker if you notice a rendering bug in any major browser.
-Pull requests will also be accepted.
+Screenshot:
+http://sstur.github.com/ckeditor-ui/skins/ozone/screenshot.png
+
+Online demo:
+http://sstur.github.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
+(best viewed in Chrome/Safari, but also tested in Firefox)
+
+Please feel free to submit bugs to the (Issue Tracker) [/sstur/ckeditor-ui/issues] if you notice
+rendering problems in any major browser.
+
+Pull requests welcome.
