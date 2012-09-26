@@ -105,6 +105,7 @@ Comments in this file will give more details about each of the above blocks.
   position: relative;
   border-bottom: 1px solid white;
   border-radius: 2px 2px 0 0;
+  background: #e9e9e9;
   background: -webkit-linear-gradient(top, whiteSmoke 0%,#E9E9E9 50%,#DEDEDE 51%,#E4E4E4 100%);
   background: -moz-linear-gradient(top, whiteSmoke 0%,#E9E9E9 50%,#DEDEDE 51%,#E4E4E4 100%);
   opacity: .7;
@@ -180,6 +181,7 @@ The .cke_dialog_tab_selected class is appended to the active tab.
   border: 1px solid #c9c9c9;
   border-radius: 3px;
   box-shadow: inset 0 1px 1px white, 1px 1px 2px rgba(0, 0, 0, .06);
+  background: #fafafa;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
   background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
 }
@@ -231,6 +233,7 @@ a.cke_dialog_tab_selected, a.cke_dialog_tab_selected:hover {
   top: 9px;
 	height: 14px;
 	width: 14px;
+  background: #fafafa;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
   background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
   border: 1px solid #a0a0a0;
@@ -393,6 +396,7 @@ The buttons used in the dialog footer or inside the contents.
 a.cke_dialog_ui_button {
   display: block;
   padding: 4px 0;
+  background: #fafafa;
   background: -webkit-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
   background: -moz-linear-gradient(top, #fafafa 0%,#eeeeee 100%);
   border: 1px solid #b7b7b7;
@@ -654,7 +658,6 @@ a.cke_smile:hover img {
   box-sizing: border-box;
   border: 1px solid #a0a0a0;
   border-radius: 2px;
-  box-shadow: 0 0 0 2px #ededed;
 }
 
 .cke_dialog_contents select:focus,
@@ -670,7 +673,7 @@ a.cke_smile:hover img {
   padding: 1px 2px;
   width: 100%;
   background: #fff;
-  box-shadow: inset 0 1px 4px #d8d8d8;
+  box-shadow: inset 0 1px 4px #d8d8d8, 0 0 0 2px #ededed;
 }
 
 .cke_dialog_contents input[type="text"],
@@ -682,6 +685,8 @@ a.cke_smile:hover img {
 .cke_dialog_contents select {
   padding: 1px;
   height: 20px;
+  /* outer "border" */
+  box-shadow: 0 0 0 2px #ededed;
   cursor: pointer;
 }
 .cke_ltr .cke_dialog_contents select {
@@ -715,10 +720,10 @@ a.cke_smile:hover img {
   }
   .cke_ltr .cke_dialog_contents select {
     background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzUzRTYwNERGRTA4MTFFMUJGOEJEMkFGNUIwNkQzODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzUzRTYwNEVGRTA4MTFFMUJGOEJEMkFGNUIwNkQzODciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NTNFNjA0QkZFMDgxMUUxQkY4QkQyQUY1QjA2RDM4NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NTNFNjA0Q0ZFMDgxMUUxQkY4QkQyQUY1QjA2RDM4NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnqilOUAAACkSURBVHjaYvz//z8DtQATAxUB08KFC0FO+z/4XDZoDWPBJsjIyBgFpHjw6PsCTAXLiDIsMTGRfdGiRRP+/v3LiS7HzMz8PS4uLhurFQsWLPgPBQxIWAEovpCNje0nNKbBGMQHiYPk0dSDMS7DMAwkZBAhw+AG8vHxfSFkEDGGgQ18+/ZtEyGDQJiFiBh/ICQk1Aykf1Mrnf0e2jmAcdCWZwABBgBWUO8Ve044/gAAAABJRU5ErkJggg==") right center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f5f5f5 50%,#ececec 51%,#f2f2f2 100%);
-    padding: 1px 14px 1px 3px;
+    padding: 1px 19px 1px 3px;
   }
   .cke_rtl .cke_dialog_contents select {
     background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkU0MkIxOUVGRTFGMTFFMUJGOEJEMkFGNUIwNkQzODciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkU0MkIxOUZGRTFGMTFFMUJGOEJEMkFGNUIwNkQzODciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRTQyQjE5Q0ZFMUYxMUUxQkY4QkQyQUY1QjA2RDM4NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRTQyQjE5REZFMUYxMUUxQkY4QkQyQUY1QjA2RDM4NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrYPhxMAAACjSURBVHjaYvz//z8DtQATAxUBC5XM+b9w4ULqumzwGoY1zBgZGaOAFA8efV+AqWAZUYYlJiayL1q0aMLfv3850eWYmZm/x8XFZWOPBmA6w4IVFixYsJCNje0nSAkMg/ggcZA8mvr/QPH/uAzDMBCPQUQZBjeQj4/vCx6DiDYMbODbt2+b8BgEN4yYHPBASEioGUj/plY6+z20cwDjoC3PAAIMAPN77hgjTkcuAAAAAElFTkSuQmCC") left center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f5f5f5 50%,#ececec 51%,#f2f2f2 100%);
-    padding: 1px 3px 1px 14px;
+    padding: 1px 3px 1px 19px;
   }
 }
