@@ -14,7 +14,7 @@ Dialogs are a complex system because they're very flexible. The CKEditor API
 makes it easy to create and customize dialogs by code, by making use of several
 different widgets inside its contents.
 
-All dialogs share a main dialog strucuture, which can be visually represented
+All dialogs share a main dialog structure, which can be visually represented
 as follows:
 
 +-- .cke_dialog -------------------------------------------------+
@@ -42,7 +42,7 @@ Comments in this file will give more details about each of the above blocks.
 /* The outer container of the dialog. */
 .cke_dialog {
 	/* Mandatory: Because the dialog.css file is loaded on demand, we avoid
-	   showing an unstyled dialog by hidding it. Here, we restore its visibility. */
+	   showing an unstyled dialog by hiding it. Here, we restore its visibility. */
 	visibility: visible;
 }
 
@@ -112,7 +112,7 @@ Comments in this file will give more details about each of the above blocks.
   text-shadow: 0 1px 0 white;
 }
 
-/* The outer part of the dialog contants, which contains the contents body
+/* The outer part of the dialog constants, which contains the contents body
    and the footer. */
 .cke_dialog_contents {
 	overflow: auto;
