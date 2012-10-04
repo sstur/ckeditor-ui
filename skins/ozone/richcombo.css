@@ -64,7 +64,7 @@ The visual representation of a rich combo widget looks as follows:
 	display: inline-block;
 	padding: 1px 4px 1px 6px;
 	height: 22px;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #b0b0b0;
   border-radius: 3px;
   box-shadow: inset 0 1px 1px white;
   background: -webkit-linear-gradient(top, #fff 0%,#f0f0f0 100%);
@@ -133,19 +133,19 @@ a.cke_combo_button:hover .cke_combo_inlinelabel {
 }
 .cke_ltr .cke_combo_open {
   padding-left: 6px;
-  border-left: 1px solid #c9c9c9;
+  border-left: 1px solid #b0b0b0;
   box-shadow: inset 1px 0 1px white;
 }
 .cke_rtl .cke_combo_open {
   padding-right: 6px;
-  border-right: 1px solid #c9c9c9;
+  border-right: 1px solid #b0b0b0;
   box-shadow: inset -1px 0 1px white;
 }
 
 /* The arrow which is displayed inside of the .cke_combo_open handler. */
 .cke_combo_arrow {
 	margin: 7px 0 0;
-	opacity: 0.70;
+	opacity: 0.9;
 
 	/* Pure CSS Arrow */
 	height: 0;
