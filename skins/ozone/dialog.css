@@ -110,6 +110,7 @@ Comments in this file will give more details about each of the above blocks.
   background: -moz-linear-gradient(top, whiteSmoke 0%,#E9E9E9 50%,#DEDEDE 51%,#E4E4E4 100%);
   opacity: .7;
   text-shadow: 0 1px 0 white;
+  box-shadow: inset 0 -1px #8E8E8E;
 }
 
 /* The outer part of the dialog constants, which contains the contents body
