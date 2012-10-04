@@ -4,16 +4,24 @@ This repository contains a build of the open source [CKEditor] (http://ckeditor.
 [skin design contest] (http://ckeditor.com/blog/ckeditor-4-skin-contest) and [my entry]
 (http://ck4skin.strutta.com/entry/730801), the "Ozone" skin.
 
-Skin source located under [skins/ozone] (/sstur/ckeditor-ui/tree/master/skins/ozone)
+Ozone is a greyscale skin with a clean, modern appearance that doesn't overpower your content. It
+is designed to fit well into any site with any color scheme. It makes heavy use of CSS3 techniques
+to produce subtle shadows and gradients while degrading gracefully for older browsers. HTML5 data
+URI's are used to minimize HTTP requests.
 
-Screenshot:
-http://sstur.github.com/ckeditor-ui/skins/ozone/screenshot.png
+Skin source in [skins/ozone] (/sstur/ckeditor-ui/tree/master/skins/ozone)
 
-Online demo:
-http://sstur.github.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
-(best viewed in Chrome/Safari, but also tested in Firefox)
+##Screenshot:
+![Ozone Skin](http://sstur.com/ckeditor-ui/skins/ozone/screenshot.png)
 
-Please feel free to submit bugs to the [Issue Tracker] (/sstur/ckeditor-ui/issues) if you notice
-rendering problems in any major browser.
+##Online demo:
+http://sstur.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
+(best viewed in Chrome, Safari or Firefox)
 
-Pull requests welcome.
+##Support
+Support for Internet Explorer 8 and 9 is in the works. Please submit bugs in the [Issue Tracker]
+(/sstur/ckeditor-ui/issues). Pull requests welcome.
+
+##Credit
+Creative Commons icons adapted from [Fugue](http://p.yusukekamiyamane.com/) and [DefaultIcon]
+(http://www.defaulticon.com/).
