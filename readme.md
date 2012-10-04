@@ -4,16 +4,16 @@ This repository contains a build of the open source [CKEditor] (http://ckeditor.
 [skin design contest] (http://ckeditor.com/blog/ckeditor-4-skin-contest) and [my entry]
 (http://ck4skin.strutta.com/entry/730801), the "Ozone" skin.
 
-Skin source located under [skins/ozone] (/sstur/ckeditor-ui/tree/master/skins/ozone)
+Skin source and more details in [skins/ozone] (/sstur/ckeditor-ui/tree/master/skins/ozone)
 
-Screenshot:
-http://sstur.github.com/ckeditor-ui/skins/ozone/screenshot.png
+##Screenshot:
+![Ozone Skin](http://sstur.com/ckeditor-ui/skins/ozone/screenshot.png)
 
-Online demo:
-http://sstur.github.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
-(best viewed in Chrome/Safari, but also tested in Firefox)
+##Online demo:
+http://sstur.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
+(best viewed in Chrome, Safari or Firefox)
 
-Please feel free to submit bugs to the [Issue Tracker] (/sstur/ckeditor-ui/issues) if you notice
-rendering problems in any major browser.
+Please submit bugs using the [Issue Tracker] (/sstur/ckeditor-ui/issues) if you notice
+rendering problems in any major browser (IE support is in the works).
 
 Pull requests welcome.
