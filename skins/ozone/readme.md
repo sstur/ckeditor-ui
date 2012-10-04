@@ -6,7 +6,7 @@ to produce subtle shadows and gradients while degrading gracefully for older bro
 URI's are used to minimize HTTP requests.
 
 ##Screenshot:
-http://sstur.github.com/ckeditor-ui/skins/ozone/screenshot.png
+http://sstur.com/ckeditor-ui/skins/ozone/screenshot.png
 
 ##Online demo:
 http://sstur.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
