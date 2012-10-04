@@ -13,7 +13,10 @@ Skin source and more details in [skins/ozone] (/sstur/ckeditor-ui/tree/master/sk
 http://sstur.com/ckeditor-ui/dev/skintuner/index.html?skin=ozone
 (best viewed in Chrome, Safari or Firefox)
 
-Please submit bugs using the [Issue Tracker] (/sstur/ckeditor-ui/issues) if you notice
-rendering problems in any major browser (IE support is in the works).
+##Support
+Support for Internet Explorer 8 and 9 is in the works. Please submit bugs in the [Issue Tracker]
+(/sstur/ckeditor-ui/issues). Pull requests welcome.
 
-Pull requests welcome.
+##Credit
+Creative Commons icons adapted from [Fugue](http://p.yusukekamiyamane.com/) and [DefaultIcon]
+(http://www.defaulticon.com/).
